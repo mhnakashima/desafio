@@ -1,0 +1,174 @@
+@import '_shortcuts';
+@import '_variables';
+@import '_helpers';
+
+
+/* =SITE */
+body{
+  margin: 0px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica", "Montserrat", "Arial" , sans-serif;
+}
+
+.navbar{
+  
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  
+  width: 100%;
+
+  background-color: #fff;
+  text-align: center;
+} 
+
+.logo{
+  color: rgba(0,0,0,0.8);
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+}
+
+.brand{
+  
+  display: inline-block;
+  
+  height: 48px;
+  width: 142px;
+
+  margin: 10px auto;
+
+}
+
+.app{
+
+  &__container{
+
+    display: flex;
+    align-items: center;
+
+    margin-top: 72px;
+    background-color: $containerColor; 
+    box-shadow: 0px 0px 1px 1px rgba(51,51,51,0.1) inset;
+  }
+}
+
+.messages{
+
+  width: 100%;
+  
+  .message-list{
+    padding: 0 15px;
+    list-style: none;
+  }
+}
+
+.message{
+  position: relative;
+  margin-bottom: 5px;
+  padding: 10px;
+  
+  background-color: #fff;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+
+  &__holder{
+    padding-left: 30px;
+  }
+
+  &__body{
+    margin-top: 10px;
+    font-size: 16px;
+  }
+
+  &__avatar{
+    position: absolute;
+
+    left: 14px;
+
+    >i{
+      color: rgba(0,0,0,0.5);
+    }
+  }
+
+  &__title{
+    color: rgba(0,0,0,0.8);
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  &__date{
+    display: inline-block;
+    margin-top: -5px;
+    padding: 2px;
+    
+    background-color: #ffc107;
+    color: rgba(0,0,0,0.8);
+    font-size: 10px;
+  }
+
+  &__field{
+    display: block;
+    min-height: 24px;
+    width: 100%;
+    
+    margin: 10px 0;
+    padding: 0 8px;
+    font-size: 16px;    
+  }
+
+  &__button{
+    padding: 8px;
+    background-color: #0f70c4;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+  }
+}
+
+.footerItem{
+  padding: 0;
+
+  .holder{
+    padding: 0 15px;
+  }
+}
+
+@media #{$tiny}{
+  .app{
+    &__container{
+      flex-direction: column;
+      margin: 72px 20px 0;
+    }
+  }
+}
+
+@media #{$large} {
+  .app{
+    &__container{
+      margin: 72px 20px 0;
+    }
+  }
+}
+
+@media #{$extralarge} {
+  .app{
+    &__container{
+      margin: 72px 30px 0;
+    }
+  }
+}
+
+
+
+
+/* =MISC */
+.fontBlue{
+  color: $fontBlue;
+}
+
+.fontRed{
+  color: $fontRed;
+}
+
+.fontOrange{
+  color: $fontOrange;
+}
